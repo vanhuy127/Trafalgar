@@ -1,0 +1,143 @@
+.review{
+    margin-bottom: 216px;
+    padding-bottom: 62px;
+    position: relative;
+    &-heading{
+        --heading-color: white;
+        margin-bottom: 66px;
+    }
+    &-main{
+        background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+        border-radius: 24px;    
+        padding: 64px 118px 79px;
+    }
+    &-content{
+        color: white;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0 30px;
+        align-items: center;
+    }
+    &-customer{
+        display: flex;
+        align-items: center;
+        gap: 0 30px;
+    }
+    &-avatar{
+        width: 141px;
+        height: 141px;
+        background: #fff;
+        border-radius: 100rem;
+        flex-shrink: 0;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 4px solid white;
+            border-radius: 100rem;
+        }
+    }
+    &-name{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    &-job{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    &-desc{
+        font-size: 19px;
+        line-height: 158%;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    &-dots1{
+        left: 0;
+        bottom: 0;
+        transform: translate(-40%, -30%);
+        z-index: -1;
+    }
+    &-dots2{
+        right: 0;
+        top: 0;
+        transform: translate(40%, 10%);
+    }
+    .slick-slider{
+        position: unset;
+        .slick-arrow{
+            position: absolute;
+            bottom: 0;
+            background: transparent;
+            outline: none;
+            border: none;
+            color: #5B9BF3;
+            font-size: 40px;
+            left: 50%;
+        }
+        .slick-next{
+            transform: translate(120px, 0);
+        }
+        .slick-prev{
+            transform: translate(-150px, 0);
+        }
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0 18px;
+        .slick-active button{
+            opacity: 1;
+        }
+        button{
+            width: 10px;
+            height: 10px;
+            border-radius: 100rem;
+            background: #5B9BF3;
+            opacity: .3;
+            font-size: 0;
+            outline: none;
+            border: none;
+        }
+        
+    }
+    @media screen and (max-width: 1023.98px) {
+        margin-bottom: 100px;
+        &-main{
+            padding: 40px 20px;
+        }
+        &-heading{
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+    }
+    @media screen and (max-width: 767.98px) {
+        &-heading{
+            font-size: 25px;
+        }
+        &-content{
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        &-customer{
+            gap: 0 15px;
+        }
+        &-avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 100rem;
+        }
+        &-name{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        &-job, &-descp{
+            font-size: 16px;
+        }
+    }
+    
+    
+}
